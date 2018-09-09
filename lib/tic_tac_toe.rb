@@ -113,16 +113,10 @@ def play(board)
     turn(board)
   end
 
-  if over?(board)
-    if won?(board)
-      winner = winner(board)
-      puts "Congratulations #{winner}!"
-    else
-      puts "Cat's game!"
-    end
+  if won?(board)
+    winner = winner(board)
+    puts "Congratulations #{winner}!"
   else
-    turn_count(board)
-    current_player(board)
-    play(board)
+    puts "Cat's game!"
   end
 end
